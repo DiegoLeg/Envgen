@@ -35,27 +35,18 @@ public class MainActivity extends AppCompatActivity {
         view.setOnTouchListener(new OnTouchListener() {
 
 
-           //public class TouchButton implements View.OnTouchListener {
-
-              // ImageView IV;
-
-            //public TouchButton (ImageView Image) {
-
-              //  IV = Image;
-            //}
-
             @Override
               public boolean onTouch(View v, MotionEvent event) {   // Agregar MotionEvent para que vea ACTION DOWN/UP
-                switch (event.getAction()) {                    // Switchea entre eventos/acciones
+                switch (event.getAction()) {                        // Switchea entre eventos/acciones
 
-                    case MotionEvent.ACTION_DOWN: {         // Qué pasa cuando toco (PRESS)
-                        //IV.setImageResource(R.drawable.btn_selected);
+                    case MotionEvent.ACTION_DOWN: {                 
+                        
                         dspFaust.setParamValue("/EG/gate", 1);
 
-                        return true; //INTENTAR que devuelva false en lugar de true, y ver qué pasa.
+                        return true;                        
                     }
 
-                    case MotionEvent.ACTION_UP: {           // Qué pasa cuando suelto (RELEASE)
+                    case MotionEvent.ACTION_UP: {
                         dspFaust.setParamValue("/EG/gate", 0);
 
                        return true;
@@ -66,18 +57,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    //public void boton (View view){
-
-       //dspFaust.setParamValue("/EG/gate", 1); //
-
-
-   // }
-
-    //public void boton2 (View view){
-
-      //dspFaust.setParamValue("/EG/gate", 0);
-
     }
 
-//}
+
